@@ -1,0 +1,19 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.page-container {
+  flex: 1;
+  position: relative;
+  overflow: auto;
+  margin-top: 64px; /* navbar height */
+}
+
+.page-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  will-change: transform;
+}

@@ -1,0 +1,126 @@
+/* ===== GLOBAL STYLES ===== */
+
+:root {
+  --blue:       #A8A49C;
+  --pink:       #c2c2c2;  
+  --pink-light: #C8C0B4; 
+  --blue-dark:  #78746E;  
+
+  --font-title:  'Arsenal', sans-serif;
+  --font-accent: 'Pompiere', cursive;
+
+  --radius:     16px;
+  --radius-sm:  8px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow:      0 8px 32px rgba(16, 14, 12, 0.10);
+  --shadow-hover: 0 16px 48px #c2c2c2;
+
+}
+
+/* ===== DARK THEME (default) ===== */
+[data-theme="dark"] {
+  --bg: #272727;
+  --bg-secondary: #313030;
+  --bg-card: #3C3B3A;
+  --bg-card-hover: #464544;
+  --bg-modal: #363534;
+  --nav-bg: rgba(39, 39, 39, 0.94);
+  --text: #F1EFEC;
+  --text-muted: #989490;
+  --text-soft: #C4C0BC;
+  --border: rgba(184, 180, 174, 0.16);
+  --tag-bg: rgba(184, 180, 174, 0.1);
+  --tag-pink-bg: rgba(208, 204, 198, 0.1);
+  --overlay: rgba(22, 22, 22, 0.82);
+  --accent: #B8B4AE;
+  --accent-soft: #D0CCC6;
+  --shadow-glow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 15px 50px #c2c2c2;
+}
+
+/* ===== LIGHT THEME ===== */
+[data-theme="light"] {
+  --bg: #F2F1EF;
+  --bg-secondary: #E8E6E2;
+  --bg-card: #F9F8F7;
+  --bg-card-hover: #EDECEA;
+  --bg-modal: #F9F8F7;
+  --nav-bg: rgba(242, 241, 239, 0.94);
+  --text: #1A1918;
+  --text-muted: #807870;
+  --text-soft: #504840;
+  --border: rgba(144, 136, 128, 0.2);
+  --tag-bg: rgba(144, 136, 128, 0.12);
+  --tag-pink-bg: rgba(180, 175, 168, 0.15);
+  --overlay: rgba(26, 25, 24, 0.7);
+  --accent: #908880;
+  --accent-soft: #B4AFA8;
+  --shadow-glow: 0 15px 50px rgba(144, 136, 128, 0.35);
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-title);
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color var(--transition), color var(--transition);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 3px;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: var(--pink);
+  color: var(--bg);
+}
+
+/* ===== UTILITY ===== */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all var(--transition);
+}
+
+.tag-blue {
+  background: var(--tag-bg);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.tag-pink {
+  background: var(--tag-pink-bg);
+  color: var(--pink);
+  border: 1px solid var(--pink);
+}
