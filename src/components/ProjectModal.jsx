@@ -55,6 +55,7 @@ export default function ProjectModal({ project, onClose }) {
       />
 
       {/* Modal */}
+      <div className="modal-wrapper">
       <motion.div
         className="modal"
         initial={{ opacity: 0, scale: 0.92, y: 30 }}
@@ -147,6 +148,7 @@ export default function ProjectModal({ project, onClose }) {
           </div>
         </div>
       </motion.div>
+      </div>
     </AnimatePresence>
   )
 }
